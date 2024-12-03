@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="margin-left:auto;margin-right:auto;text-align: center; "><U>CALCULATOR </U></h1>
+    <div class="summary">
+        <b><p>This is Abhishek Kolloju. I created a basic calculator that could be shown in a browser using
+            <i>HTML</i>, <i>CSS-cascading style sheet</i>, and basic <i>java script</i>.
+            I have defined a calculator container and positioned it in the middle.
+            To show the numbers, I installed a display with input type. Next, in order to affect the display
+            value, I added buttons, each of which had a onclick value. In order to make the calculator seem
+            nice, I added the CSS required. In order to obtain the evaluation of the string in the display
+            value, I ultimately used the eval() method on toString() of the display value at the onclick
+            button of Equal to.
+       </p></b>
+    </div>
+    <div class="container">
+        <div class="calculator">
+            <form >
+                <div class="display">
+                    <input type="text" name ="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value ='' ">
+                    <input type="button" value="%" onclick="display.value +='%' ">
+                    <input type="button" value="Del" onclick="display.value = display.value.toString().slice(0,-1) " >
+                    <input type="button" value="/" onclick="display.value +='/' ">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value +='7' ">
+                    <input type="button" value="8" onclick="display.value +='8' ">
+                    <input type="button" value="9" onclick="display.value +='9' ">
+                    <input type="button" value="*" onclick="display.value +='*' ">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value +='4' ">
+                    <input type="button" value="5" onclick="display.value +='5' ">
+                    <input type="button" value="6" onclick="display.value +='6' ">
+                    <input type="button" value="-" onclick="display.value +='-' ">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value +='1' ">
+                    <input type="button" value="2" onclick="display.value +='2' ">
+                    <input type="button" value="3" onclick="display.value +='3' ">
+                    <input type="button" value="+" onclick="display.value +='+' ">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value +='00' ">
+                    <input type="button" value="0" onclick="display.value +='0' ">
+                    <input type="button" value="." onclick="display.value +='.' ">
+                    <input type="button" value="=" class="equal" onclick="display.value = eval(display.value) ">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
